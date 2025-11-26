@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-time Object Detection for Visually Impaired Champions</title>
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+   
+</head>
+
+<body>
+    <h1>🔍 Real-time Object Detection</h1>
+    <div id="container">
+        <video id="video" autoplay playsinline></video>
+        <canvas id="canvas"></canvas>
+    </div>
+    <button id="toggle-button" onclick="toggleDetection()">Start Detection</button>
+    <div id="slider-container">
+        <label for="interval">Detection Frequency (ms): </label>
+        <input type="range" id="interval" min="100" max="2000" step="100" value="500" onchange="updateInterval()">
+        <span id="interval-value">500</span> ms
+    </div>
+
+    <script src="obj_dec.js"></script>
+</body>
+
+</html>
+
+
